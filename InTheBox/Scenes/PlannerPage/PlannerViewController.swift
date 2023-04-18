@@ -137,7 +137,7 @@ final class PlannerViewController: UIViewController {
     
     @objc func addToDoItemButtonTapped() {
         let popUpWindow: PopUpWithTextFieldVC!
-        popUpWindow = PopUpWithTextFieldVC(title: "What do you want to do today??", buttonText: "Add To-Do", buttonAction: { [weak self] text in
+        popUpWindow = PopUpWithTextFieldVC(title: "What do you want to do today?", buttonText: "Add To-Do", buttonAction: { [weak self] text in
             guard let self = self else { return }
             self.createToDo(with: text)
         })
