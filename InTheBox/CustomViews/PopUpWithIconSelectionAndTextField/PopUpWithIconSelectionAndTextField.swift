@@ -102,7 +102,6 @@ extension PopUpWithIconSelectionAndTextField: UICollectionViewDelegate, UICollec
         }
         
         guard let cell = iconCollectionView.cellForItem(at: indexPath) as? IconSelectionCollectionViewCell else { return }
-        
         self.selectedIcon = cell.setSelected(true)
     }
 }

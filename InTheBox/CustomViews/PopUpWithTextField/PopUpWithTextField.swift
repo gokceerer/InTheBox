@@ -7,6 +7,7 @@
 
 import UIKit
 
+//TODO: Will be rewritten like PopUpWithIconSelectionAndTextField
 class PopUpWithTextField: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var popUpTitle: UILabel!

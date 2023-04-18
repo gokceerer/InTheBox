@@ -23,7 +23,7 @@ final class PlannerViewController: UIViewController {
     @IBOutlet private weak var toDoListStackView: UIStackView!
     
     @IBOutlet weak var reminderStackView: UIStackView!
-    private var isJournalEditing:Bool = false
+    private var isJournalEditing: Bool = false
     private var currentDate: Date = Date.now
     private var viewModel: PlannerViewModelProtocol! {
         didSet {
@@ -37,9 +37,6 @@ final class PlannerViewController: UIViewController {
         setupButtonActions()
         setupGreetingTitle()
         setupDateText()
-        journalEntryTextView.layer.cornerRadius = 10.0
-        journalEntryTextView.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        journalEntryTextView.font = UIFont(name: "SFProRounded-Regular", size: 17)
     }
     
     func setupButtonActions() {
@@ -60,6 +57,82 @@ final class PlannerViewController: UIViewController {
         viewModel.setCurrentDate(with: Date.now)
     }
     
+    func setupJournalEntryView() {
+        journalEntryTextView.layer.cornerRadius = 10.0
+        journalEntryTextView.textContainerInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        journalEntryTextView.font = UIFont(name: "SFProRounded-Regular", size: 17)
+    }
+}
+
+//Objc methods
+extension PlannerViewController {
+    @objc func checkToDo(button: UIButton) {
+        let imgSquare = UIImage(systemName: "square")
+        let imgCheckedSquare = UIImage(systemName: "checkmark.square.fill")
+        let buttonImage = button.currentImage == imgSquare ? imgCheckedSquare : imgSquare
+        button.setImage(buttonImage, for: .normal)
+    }
+    
+    @objc func editAppereanceButtonTapped() {
+        
+    }
+    
+    @objc func settingsButtonTapped() {
+        
+    }
+    
+    @objc func previousDayButtonTapped() {
+        let currentDate = viewModel.currentDate
+        viewModel.setCurrentDate(with: currentDate.dayBefore)
+        //Retrieve yesterday's data
+    }
+    
+    @objc func nextDayButtonTapped() {
+        let currentDate = viewModel.currentDate
+        viewModel.setCurrentDate(with: currentDate.dayAfter)
+        //Retrieve next day's data
+    }
+    
+    @objc func addToDoItemButtonTapped() {
+        let popUpWindow: PopUpWithTextFieldVC!
+        popUpWindow = PopUpWithTextFieldVC(title: "What do you want to do today?", buttonText: "Add To-Do", buttonAction: { [weak self] text in
+            guard let self = self else { return }
+            
+            //Should be done with view model so it can record to the permanent data source
+            self.createToDo(with: text)
+        })
+        self.present(popUpWindow, animated: true, completion: nil)
+    }
+    
+    @objc func addReminderButtonTapped() {
+        let popUpWindow = PopUpWithIconSelectionAndTextField(buttonAction: { [weak self] icon, text in
+            guard let self = self else { return }
+            //Should be done with view model so it can record to the permanent data source
+            self.createReminder(with: icon, with: text)
+        })
+        self.present(popUpWindow, animated: true, completion: nil)
+    }
+    
+    @objc func editJournalEntryButtonTapped() {
+        if journalEntryTextView.isFirstResponder {
+            editJournalEntryButton.setImage(UIImage(systemName: "pencil"), for: .normal)
+            journalEntryTextView.isEditable = false
+            journalEntryTextView.layer.borderWidth = 0.0
+            journalEntryTextView.resignFirstResponder()
+
+        } else {
+            editJournalEntryButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
+            journalEntryTextView.isEditable = true
+            journalEntryTextView.layer.borderWidth = 2.0
+            journalEntryTextView.layer.borderColor = UIColor.gray.cgColor
+
+            journalEntryTextView.becomeFirstResponder()
+        }
+    }
+}
+
+//Helpers
+extension PlannerViewController {
     func createToDo(with text: String) {
         let button = UIButton()
         button.tintColor = .black
@@ -106,68 +179,6 @@ final class PlannerViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         self.reminderStackView.addArrangedSubview(stackView)
-    }
-    
-    @objc func checkToDo(button: UIButton) {
-        let imgSquare = UIImage(systemName: "square")
-        let imgCheckedSquare = UIImage(systemName: "checkmark.square.fill")
-        let buttonImage = button.currentImage == imgSquare ? imgCheckedSquare : imgSquare
-        button.setImage(buttonImage, for: .normal)
-    }
-    
-    @objc func editAppereanceButtonTapped() {
-        
-    }
-    
-    @objc func settingsButtonTapped() {
-        
-    }
-    
-    @objc func previousDayButtonTapped() {
-        let currentDate = viewModel.currentDate
-        viewModel.setCurrentDate(with: currentDate.dayBefore)
-        //Retrieve yesterday's data
-    }
-    
-    @objc func nextDayButtonTapped() {
-        let currentDate = viewModel.currentDate
-        viewModel.setCurrentDate(with: currentDate.dayAfter)
-        //Retrieve next day's data
-    }
-    
-    @objc func addToDoItemButtonTapped() {
-        let popUpWindow: PopUpWithTextFieldVC!
-        popUpWindow = PopUpWithTextFieldVC(title: "What do you want to do today?", buttonText: "Add To-Do", buttonAction: { [weak self] text in
-            guard let self = self else { return }
-            self.createToDo(with: text)
-        })
-        self.present(popUpWindow, animated: true, completion: nil)
-    }
-    
-    @objc func addReminderButtonTapped() {
-        let popUpWindow = PopUpWithIconSelectionAndTextField(buttonAction: { [weak self] icon, text in
-            guard let self = self else { return }
-            self.createReminder(with: icon, with: text)
-        })
-        self.present(popUpWindow, animated: true, completion: nil)
-    }
-    
-    @objc func editJournalEntryButtonTapped() {
-        if journalEntryTextView.isFirstResponder {
-            editJournalEntryButton.setImage(UIImage(systemName: "pencil"), for: .normal)
-            journalEntryTextView.isEditable = false
-            journalEntryTextView.layer.borderWidth = 0.0
-            journalEntryTextView.resignFirstResponder()
-
-        } else {
-            editJournalEntryButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
-            journalEntryTextView.isEditable = true
-            journalEntryTextView.layer.borderWidth = 2.0
-            journalEntryTextView.layer.borderColor = UIColor.gray.cgColor
-
-            journalEntryTextView.becomeFirstResponder()
-        }
-        
     }
 }
 

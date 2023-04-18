@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+//TODO: Will be rewritten like PopUpWithIconSelectionAndTextField
 class PopUpWithTextFieldVC: UIViewController {
 
     private let popUpView = PopUpWithTextField()

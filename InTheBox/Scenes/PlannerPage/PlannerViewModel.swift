@@ -52,7 +52,6 @@ final class PlannerViewModel: PlannerViewModelProtocol {
         }
         
         self.delegate?.handleViewModelOutput(.setupGreetingTitle(greetingText, greetingImage))
-        
     }
 }
 
