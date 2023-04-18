@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ihv-ip-ryZ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Planner View Controller-->
+        <scene sceneID="uZF-hO-Vaz">
+            <objects>
+                <viewController id="Ihv-ip-ryZ" customClass="PlannerViewController" customModule="InTheBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eho-tT-Tau">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Morning" translatesAutoresizingMaskIntoConstraints="NO" id="jNx-xj-ez9">
+                                <rect key="frame" x="19.666666666666657" y="79" width="354" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="354" id="4ZU-cD-iW3"/>
+                                    <constraint firstAttribute="height" constant="95" id="8Le-3n-Oef"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWu-7A-hWG">
+                                <rect key="frame" x="39.666666666666657" y="109" width="243.99999999999997" height="35"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Good Morning!">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="30" name="SFProRounded-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="tzt-ui-UdT">
+                                <rect key="frame" x="293.66666666666669" y="114.66666666666667" width="60" height="24.000000000000014"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mE-nP-kYP">
+                                        <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="Xbn-a5-ymD"/>
+                                            <constraint firstAttribute="height" constant="24" id="uSc-uP-pQR"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="slider.horizontal.3" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nin-hY-GjL">
+                                        <rect key="frame" x="36" y="0.0" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="PzV-hf-pPS"/>
+                                            <constraint firstAttribute="width" constant="24" id="QGa-Yh-P2M"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="gear" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKz-ag-S4o">
+                                <rect key="frame" x="19.666666666666657" y="194" width="354" height="26"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIQ-Od-MM3">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="0LA-8g-byc"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vi-hs-CMZ">
+                                        <rect key="frame" x="16" y="0.0" width="322" height="26"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="April 23th 2023 - Tuesday">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="22" name="SFProRounded-Semibold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vX-fV-1qM">
+                                        <rect key="frame" x="338" y="0.0" width="16" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="QUd-S6-NT1"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="lax-pj-e1i"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NGM-Bx-bkJ">
+                                <rect key="frame" x="19.666666666666657" y="252" width="354" height="546"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EPH-k9-U4t" userLabel="To-Do List Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0I2-gL-7Ye" userLabel="Title">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orQ-kQ-qbA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="24"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="To-Do List">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="20" name="SFProRounded-Semibold"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEZ-fN-DYW">
+                                                        <rect key="frame" x="324" y="0.0" width="30" height="24"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="30" id="o6g-UC-6l7"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="GsH-T4-RJy"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="R3S-hG-YIy" userLabel="Reminder Stack View">
+                                        <rect key="frame" x="0.0" y="44" width="354" height="24"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gT5-MK-cZt" userLabel="Title">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKn-yZ-TFt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="24"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Reminders">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="20" name="SFProRounded-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hc-Tv-JNu">
+                                                        <rect key="frame" x="324" y="0.0" width="30" height="24"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="rBV-Qf-7Wb"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KnC-k9-cHx" userLabel="Journal Stack View">
+                                        <rect key="frame" x="0.0" y="88" width="354" height="458"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oG9-vV-m8B" userLabel="Title">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-wY-ETA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="24"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Journal">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="20" name="SFProRounded-Semibold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkC-pc-dx2">
+                                                        <rect key="frame" x="324" y="0.0" width="30" height="24"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system">
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="mSk-Jp-YGp"/>
+                                                </constraints>
+                                            </stackView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Hy-de-1d9">
+                                                <rect key="frame" x="0.0" y="34" width="354" height="424"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                <attributedString key="attributedText"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3hc-Tv-JNu" firstAttribute="centerX" secondItem="oEZ-fN-DYW" secondAttribute="centerX" id="UPK-2a-naL"/>
+                                    <constraint firstItem="BkC-pc-dx2" firstAttribute="centerX" secondItem="3hc-Tv-JNu" secondAttribute="centerX" id="k2M-KN-xdK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lnf-CL-llA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GWu-7A-hWG" firstAttribute="leading" secondItem="jNx-xj-ez9" secondAttribute="leading" constant="20" id="7AU-3G-GXd"/>
+                            <constraint firstItem="tzt-ui-UdT" firstAttribute="centerY" secondItem="GWu-7A-hWG" secondAttribute="centerY" id="Ay5-sS-r4v"/>
+                            <constraint firstItem="GWu-7A-hWG" firstAttribute="centerY" secondItem="jNx-xj-ez9" secondAttribute="centerY" id="FUn-1t-OH8"/>
+                            <constraint firstItem="NGM-Bx-bkJ" firstAttribute="trailing" secondItem="jNx-xj-ez9" secondAttribute="trailing" id="IIz-F0-Eq6"/>
+                            <constraint firstItem="wKz-ag-S4o" firstAttribute="top" secondItem="jNx-xj-ez9" secondAttribute="bottom" constant="20" id="L7E-Sa-pTa"/>
+                            <constraint firstItem="tzt-ui-UdT" firstAttribute="leading" secondItem="GWu-7A-hWG" secondAttribute="trailing" constant="10" id="Opd-GN-QK0"/>
+                            <constraint firstItem="jNx-xj-ez9" firstAttribute="top" secondItem="Lnf-CL-llA" secondAttribute="top" constant="20" id="Rcn-iZ-LHc"/>
+                            <constraint firstItem="jNx-xj-ez9" firstAttribute="trailing" secondItem="tzt-ui-UdT" secondAttribute="trailing" constant="20" id="TL0-9J-PfM"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="NGM-Bx-bkJ" secondAttribute="bottom" constant="20" id="Uhj-aD-pMH"/>
+                            <constraint firstItem="jNx-xj-ez9" firstAttribute="centerX" secondItem="eho-tT-Tau" secondAttribute="centerX" id="aET-mJ-ndb"/>
+                            <constraint firstItem="NGM-Bx-bkJ" firstAttribute="top" secondItem="wKz-ag-S4o" secondAttribute="bottom" constant="32" id="hRX-uK-lRN"/>
+                            <constraint firstItem="wKz-ag-S4o" firstAttribute="leading" secondItem="jNx-xj-ez9" secondAttribute="leading" id="mKL-HT-MVG"/>
+                            <constraint firstItem="wKz-ag-S4o" firstAttribute="trailing" secondItem="jNx-xj-ez9" secondAttribute="trailing" id="pVG-R3-l4r"/>
+                            <constraint firstItem="NGM-Bx-bkJ" firstAttribute="leading" secondItem="jNx-xj-ez9" secondAttribute="leading" id="x5i-ic-26y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addReminderButton" destination="3hc-Tv-JNu" id="UgU-yz-N37"/>
+                        <outlet property="addToDoItemButton" destination="oEZ-fN-DYW" id="7kS-02-mZY"/>
+                        <outlet property="dateLabel" destination="7Vi-hs-CMZ" id="2C2-47-wWG"/>
+                        <outlet property="editAppereanceButton" destination="9mE-nP-kYP" id="pbs-g1-aI9"/>
+                        <outlet property="editJournalEntryButton" destination="BkC-pc-dx2" id="z2c-LW-wT7"/>
+                        <outlet property="greetingImage" destination="jNx-xj-ez9" id="bGg-89-HhD"/>
+                        <outlet property="greetingTitle" destination="GWu-7A-hWG" id="Nd9-05-7wu"/>
+                        <outlet property="journalEntryTextView" destination="6Hy-de-1d9" id="mcM-xD-CNv"/>
+                        <outlet property="nextDayButton" destination="6vX-fV-1qM" id="iGq-vq-ZxV"/>
+                        <outlet property="previousDayButton" destination="RIQ-Od-MM3" id="2ng-0o-wCs"/>
+                        <outlet property="reminderStackView" destination="R3S-hG-YIy" id="TDp-iR-wab"/>
+                        <outlet property="settingsButton" destination="nin-hY-GjL" id="Vqh-5N-ZgV"/>
+                        <outlet property="toDoListStackView" destination="EPH-k9-U4t" id="fDK-xq-Sgg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="skZ-mN-LzQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072" y="-134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Morning" width="354" height="95"/>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
+        <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
