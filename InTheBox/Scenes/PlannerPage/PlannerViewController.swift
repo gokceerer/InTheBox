@@ -37,6 +37,7 @@ final class PlannerViewController: UIViewController {
         setupButtonActions()
         setupGreetingTitle()
         setupDateText()
+        setupJournalEntryView()
     }
     
     func setupButtonActions() {
@@ -114,13 +115,16 @@ extension PlannerViewController {
     }
     
     @objc func editJournalEntryButtonTapped() {
+        journalEntryTextView.isScrollEnabled = true
         if journalEntryTextView.isFirstResponder {
+            journalEntryTextView.scrollRangeToVisible(NSRange(location: 0,length: 0))
             editJournalEntryButton.setImage(UIImage(systemName: "pencil"), for: .normal)
             journalEntryTextView.isEditable = false
             journalEntryTextView.layer.borderWidth = 0.0
             journalEntryTextView.resignFirstResponder()
 
         } else {
+            journalEntryTextView.scrollRangeToVisible(journalEntryTextView.selectedRange)
             editJournalEntryButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
             journalEntryTextView.isEditable = true
             journalEntryTextView.layer.borderWidth = 2.0
