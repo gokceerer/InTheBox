@@ -133,6 +133,10 @@ extension PlannerViewController {
             journalEntryTextView.becomeFirstResponder()
         }
     }
+    
+    @objc func openToDoOptions() {
+        
+    }
 }
 
 //Helpers
@@ -142,7 +146,8 @@ extension PlannerViewController {
         button.tintColor = .black
         button.setImage(UIImage(systemName: "square"), for: .normal)
         button.addTarget(self, action: #selector(checkToDo), for: .touchUpInside)
-
+        button.widthAnchor.constraint(equalToConstant: 20.0).isActive = true
+        
         let textLabel = UILabel()
         textLabel.text  = text
         textLabel.textAlignment = .left
@@ -150,15 +155,55 @@ extension PlannerViewController {
         textLabel.numberOfLines = 0
         textLabel.lineBreakMode = .byWordWrapping
         
+        let optionButton = UIButton()
+        optionButton.tintColor = .gray
+        optionButton.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        optionButton.addTarget(self, action: #selector(openToDoOptions), for: .touchUpInside)
+        optionButton.widthAnchor.constraint(equalToConstant: 30.0).isActive = true
+        optionButton.showsMenuAsPrimaryAction = true
+        
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.alignment = .top
+        stackView.distribution = .fill
         stackView.spacing = 5
         stackView.addArrangedSubview(button)
         stackView.addArrangedSubview(textLabel)
+        stackView.addArrangedSubview(optionButton)
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
+        let delete = UIAction(title: "Delete",
+          image: UIImage(systemName: "trash.fill")) { sender in
+            stackView.removeFromSuperview()
+        }
+        
+        let edit = UIAction(title: "Edit",
+          image: UIImage(systemName: "pencil")) { sender in
+            self.editToDo(label: textLabel)
+        }
+   
+        optionButton.menu = UIMenu(title: "", children: [edit, delete])
+        
         self.toDoListStackView.addArrangedSubview(stackView)
+    }
+    
+    func editToDo(label: UILabel) {
+        let popUpWindow: PopUpWithTextField!
+        popUpWindow = PopUpWithTextField(title: "Edit To-Do", buttonText: "Update To-Do", placeholderText: label.text, buttonAction: { text in
+            
+            //Should be done with view model so it can record to the permanent data source
+            label.text = text
+        })
+        self.present(popUpWindow, animated: true, completion: nil)
+    }
+    
+    func editReminder(iconButton: UIButton, label: UILabel) {
+        let popUpWindow = PopUpWithIconSelectionAndTextField(placeholderIcon: iconButton.image(for: .normal), placeholderText: label.text, buttonAction: { icon, text in
+            //Should be done with view model so it can record to the permanent data source
+            iconButton.setImage(icon, for: .normal)
+            label.text = text
+        })
+        self.present(popUpWindow, animated: true, completion: nil)
     }
     
     func createReminder(with image: UIImage, with text: String) {
@@ -174,13 +219,33 @@ extension PlannerViewController {
         textLabel.numberOfLines = 0
         textLabel.lineBreakMode = .byWordWrapping
         
+        let optionButton = UIButton()
+        optionButton.tintColor = .gray
+        optionButton.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        optionButton.addTarget(self, action: #selector(openToDoOptions), for: .touchUpInside)
+        optionButton.widthAnchor.constraint(equalToConstant: 30.0).isActive = true
+        optionButton.showsMenuAsPrimaryAction = true
+        
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.alignment = .top
         stackView.spacing = 10
         stackView.addArrangedSubview(button)
         stackView.addArrangedSubview(textLabel)
+        stackView.addArrangedSubview(optionButton)
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let delete = UIAction(title: "Delete",
+          image: UIImage(systemName: "trash.fill")) { sender in
+            stackView.removeFromSuperview()
+        }
+        
+        let edit = UIAction(title: "Edit",
+          image: UIImage(systemName: "pencil")) { sender in
+            self.editReminder(iconButton: button, label: textLabel)
+        }
+   
+        optionButton.menu = UIMenu(title: "", children: [edit, delete])
         
         self.reminderStackView.addArrangedSubview(stackView)
     }

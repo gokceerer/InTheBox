@@ -18,14 +18,16 @@ class PopUpWithTextField: UIViewController {
     private var buttonAction: ((String) -> ())?
     private var popUpTitleString: String?
     private var buttonText: String?
+    private var placeholderText: String?
     
-    init(title: String, buttonText: String, buttonAction: ((String) -> ())? = nil) {
+    init(title: String, buttonText: String, placeholderText: String? = nil, buttonAction: ((String) -> ())? = nil) {
         super.init(nibName: "PopUpWithTextField", bundle: nil)
         self.modalTransitionStyle = .crossDissolve
         self.modalPresentationStyle = .overCurrentContext
         self.buttonAction = buttonAction
         self.popUpTitleString = title
         self.buttonText = buttonText
+        self.placeholderText = placeholderText
     }
     
     required init?(coder: NSCoder) {
@@ -38,6 +40,7 @@ class PopUpWithTextField: UIViewController {
         self.popUpTextField.layer.borderWidth = 1.0
         self.popUpTextField.layer.borderColor = UIColor.gray.cgColor
         self.popUpTextField.layer.cornerRadius = 10
+        self.popUpTextField.text = placeholderText
         self.popUpButton.layer.cornerRadius = 10
         self.popUpTitle.text = self.popUpTitleString
         self.popUpButton.setAttributedTitle(        NSAttributedString(string: self.buttonText ?? ""), for: .normal)

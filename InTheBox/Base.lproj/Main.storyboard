@@ -69,9 +69,9 @@
                                 <rect key="frame" x="19.666666666666657" y="194" width="354" height="26"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIQ-Od-MM3">
-                                        <rect key="frame" x="0.0" y="0.0" width="16" height="26"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="26"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="16" id="0LA-8g-byc"/>
+                                            <constraint firstAttribute="width" constant="20" id="0LA-8g-byc"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -80,7 +80,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vi-hs-CMZ">
-                                        <rect key="frame" x="16" y="0.0" width="322" height="26"/>
+                                        <rect key="frame" x="20" y="0.0" width="304" height="26"/>
                                         <attributedString key="attributedText">
                                             <fragment content="April 23th 2023 - Tuesday">
                                                 <attributes>
@@ -93,9 +93,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vX-fV-1qM">
-                                        <rect key="frame" x="338" y="0.0" width="16" height="26"/>
+                                        <rect key="frame" x="324" y="0.0" width="30" height="26"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="16" id="QUd-S6-NT1"/>
+                                            <constraint firstAttribute="width" constant="30" id="QUd-S6-NT1"/>
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -221,6 +221,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="3hc-Tv-JNu" firstAttribute="centerX" secondItem="oEZ-fN-DYW" secondAttribute="centerX" id="UPK-2a-naL"/>
+                                    <constraint firstItem="EPH-k9-U4t" firstAttribute="width" secondItem="NGM-Bx-bkJ" secondAttribute="width" id="XUI-J8-hNi"/>
                                     <constraint firstItem="BkC-pc-dx2" firstAttribute="centerX" secondItem="3hc-Tv-JNu" secondAttribute="centerX" id="k2M-KN-xdK"/>
                                 </constraints>
                             </stackView>

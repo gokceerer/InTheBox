@@ -17,6 +17,8 @@ class PopUpWithIconSelectionAndTextField: UIViewController {
     @IBOutlet weak var reminderTextField: UITextField!
     
     private var buttonAction: ((UIImage, String) -> ())?
+    private var placeholderIcon: UIImage?
+    private var placeholderText: String?
     private var selectedIcon: UIImage?
     private let iconList: [UIImage?] = [UIImage(systemName: "birthday.cake.fill"),
                                         UIImage(systemName: "clock.fill"),
@@ -32,11 +34,13 @@ class PopUpWithIconSelectionAndTextField: UIViewController {
                                         UIImage(systemName: "person.2.fill"),
                                         UIImage(systemName: "stethoscope")]
     
-    init(buttonAction: ((UIImage, String) -> ())? = nil) {
+    init(placeholderIcon: UIImage? = nil, placeholderText: String? = nil, buttonAction: ((UIImage, String) -> ())? = nil) {
         super.init(nibName: "PopUpWithIconSelectionAndTextField", bundle: nil)
         self.modalTransitionStyle = .crossDissolve
         self.modalPresentationStyle = .overCurrentContext
         self.buttonAction = buttonAction
+        self.placeholderIcon = placeholderIcon
+        self.placeholderText = placeholderText
     }
     
     required init?(coder: NSCoder) {
@@ -57,7 +61,10 @@ class PopUpWithIconSelectionAndTextField: UIViewController {
         self.reminderTextField.layer.borderColor = UIColor.gray.cgColor
         self.reminderTextField.layer.cornerRadius = 10
         self.popUpButton.layer.cornerRadius = 10
-
+        
+        if let placeholderText = placeholderText, let placeholderIcon = placeholderIcon {
+            self.reminderTextField.text = placeholderText
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -91,6 +98,16 @@ extension PopUpWithIconSelectionAndTextField: UICollectionViewDelegate, UICollec
             fatalError("Unable to dequeue a IconSelectionCollectionViewCell")
         }
         cell.updateCell(with: iconList[indexPath.row])
+        if let placeholderIcon = placeholderIcon {
+            if placeholderIcon == iconList[indexPath.row] {
+                self.selectedIcon = cell.setSelected(true)
+            }
+        } else {
+            if self.selectedIcon == nil && indexPath.row == 0 {
+                self.selectedIcon = cell.setSelected(true)
+            }
+        }
+        
         return cell
     }
     
