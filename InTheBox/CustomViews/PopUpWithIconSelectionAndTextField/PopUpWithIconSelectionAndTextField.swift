@@ -61,10 +61,6 @@ class PopUpWithIconSelectionAndTextField: UIViewController {
         self.reminderTextField.layer.borderColor = UIColor.gray.cgColor
         self.reminderTextField.layer.cornerRadius = 10
         self.popUpButton.layer.cornerRadius = 10
-        
-        if let placeholderText = placeholderText, let placeholderIcon = placeholderIcon {
-            self.reminderTextField.text = placeholderText
-        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -98,7 +94,9 @@ extension PopUpWithIconSelectionAndTextField: UICollectionViewDelegate, UICollec
             fatalError("Unable to dequeue a IconSelectionCollectionViewCell")
         }
         cell.updateCell(with: iconList[indexPath.row])
-        if let placeholderIcon = placeholderIcon {
+        if let placeholderIcon = placeholderIcon, let placeholderText = placeholderText {
+            self.reminderTextField.text = placeholderText
+            
             if placeholderIcon == iconList[indexPath.row] {
                 self.selectedIcon = cell.setSelected(true)
             }
