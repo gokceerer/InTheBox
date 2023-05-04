@@ -13,7 +13,6 @@ class PopUpWithTextField: UIViewController {
     @IBOutlet weak var popUpTitle: UILabel!
     @IBOutlet weak var popUpTextField: UITextField!
     @IBOutlet weak var popUpButton: UIButton!
-    @IBOutlet weak var popUpBackground: UIView!
     @IBOutlet weak var backgroundView: UIView!
     
     private var buttonAction: ((String) -> ())?

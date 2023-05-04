@@ -11,8 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpWithTextField" customModule="InTheBox" customModuleProvider="target">
             <connections>
                 <outlet property="backgroundView" destination="gFu-KH-zbT" id="Rl8-Ug-UrF"/>
-                <outlet property="contentView" destination="iN0-l3-epB" id="egM-gR-s2m"/>
-                <outlet property="popUpBackground" destination="4kh-yp-NPA" id="0Js-z7-PLA"/>
+                <outlet property="contentView" destination="4kh-yp-NPA" id="i3l-Qw-tU0"/>
                 <outlet property="popUpButton" destination="sTU-gx-SVo" id="XQo-Nf-Q22"/>
                 <outlet property="popUpTextField" destination="7Si-ok-p8Q" id="fx0-Nz-XVC"/>
                 <outlet property="popUpTitle" destination="pWI-Gc-sRM" id="q58-XI-18J"/>
