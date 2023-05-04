@@ -18,7 +18,6 @@
 		D36D9FCD29E9817A0044D2DF /* PlannerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D9FCC29E9817A0044D2DF /* PlannerViewModel.swift */; };
 		D36D9FD629E98C0F0044D2DF /* PopUpWithTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D9FD529E98C0F0044D2DF /* PopUpWithTextField.swift */; };
 		D36D9FD829E98C600044D2DF /* PopUpWithTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = D36D9FD729E98C600044D2DF /* PopUpWithTextField.xib */; };
-		D36D9FDA29E991090044D2DF /* PopUpWithTextFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36D9FD929E991090044D2DF /* PopUpWithTextFieldVC.swift */; };
 		D3F14AD529DB04B3004547F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F14AD429DB04B3004547F8 /* AppDelegate.swift */; };
 		D3F14AD729DB04B3004547F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F14AD629DB04B3004547F8 /* SceneDelegate.swift */; };
 		D3F14AD929DB04B3004547F8 /* PlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F14AD829DB04B3004547F8 /* PlannerViewController.swift */; };
@@ -39,7 +38,6 @@
 		D36D9FCC29E9817A0044D2DF /* PlannerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannerViewModel.swift; sourceTree = "<group>"; };
 		D36D9FD529E98C0F0044D2DF /* PopUpWithTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpWithTextField.swift; sourceTree = "<group>"; };
 		D36D9FD729E98C600044D2DF /* PopUpWithTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpWithTextField.xib; sourceTree = "<group>"; };
-		D36D9FD929E991090044D2DF /* PopUpWithTextFieldVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpWithTextFieldVC.swift; sourceTree = "<group>"; };
 		D3F14AD129DB04B3004547F8 /* InTheBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InTheBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F14AD429DB04B3004547F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F14AD629DB04B3004547F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 			children = (
 				D36D9FD529E98C0F0044D2DF /* PopUpWithTextField.swift */,
 				D36D9FD729E98C600044D2DF /* PopUpWithTextField.xib */,
-				D36D9FD929E991090044D2DF /* PopUpWithTextFieldVC.swift */,
 			);
 			path = PopUpWithTextField;
 			sourceTree = "<group>";
@@ -244,7 +241,6 @@
 				D3F14AD729DB04B3004547F8 /* SceneDelegate.swift in Sources */,
 				D36D9FD629E98C0F0044D2DF /* PopUpWithTextField.swift in Sources */,
 				D30F5B4929EEB5B70072B7D6 /* PopUpWithIconSelectionAndTextField.swift in Sources */,
-				D36D9FDA29E991090044D2DF /* PopUpWithTextFieldVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

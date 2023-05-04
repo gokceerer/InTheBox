@@ -95,8 +95,8 @@ extension PlannerViewController {
     }
     
     @objc func addToDoItemButtonTapped() {
-        let popUpWindow: PopUpWithTextFieldVC!
-        popUpWindow = PopUpWithTextFieldVC(title: "What do you want to do today?", buttonText: "Add To-Do", buttonAction: { [weak self] text in
+        let popUpWindow: PopUpWithTextField!
+        popUpWindow = PopUpWithTextField(title: "What do you want to do today?", buttonText: "Add To-Do", buttonAction: { [weak self] text in
             guard let self = self else { return }
             
             //Should be done with view model so it can record to the permanent data source
