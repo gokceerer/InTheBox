@@ -47,7 +47,7 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="slider.horizontal.3" catalog="system">
+                                        <buttonConfiguration key="configuration" style="plain" image="paintpalette" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
                                         </buttonConfiguration>
                                     </button>
@@ -108,157 +108,177 @@
                                     <constraint firstAttribute="height" constant="26" id="lax-pj-e1i"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NGM-Bx-bkJ">
-                                <rect key="frame" x="19.666666666666657" y="252" width="354" height="546"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6V1-OC-DbL">
+                                <rect key="frame" x="0.0" y="252" width="393" height="566"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="EPH-k9-U4t" userLabel="To-Do List Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="pXa-8v-EXn">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="544"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0I2-gL-7Ye" userLabel="Title">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="d6t-Tb-4X4" userLabel="To-Do List Stack View">
+                                                <rect key="frame" x="20" y="0.0" width="353" height="24"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orQ-kQ-qbA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="24"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="To-Do List">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="20" name="SFProRounded-Semibold"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEZ-fN-DYW">
-                                                        <rect key="frame" x="324" y="0.0" width="30" height="24"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbV-QJ-7fW" userLabel="Title">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hi8-QY-iGC">
+                                                                <rect key="frame" x="0.0" y="0.0" width="323" height="24"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="To-Do List">
+                                                                        <attributes>
+                                                                            <font key="NSFont" size="20" name="SFProRounded-Semibold"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0h-v0-GgI">
+                                                                <rect key="frame" x="323" y="0.0" width="30" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="HkY-UX-Ea5"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="30" id="o6g-UC-6l7"/>
+                                                            <constraint firstAttribute="height" constant="24" id="ssm-6N-Oeh"/>
                                                         </constraints>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
-                                                        </buttonConfiguration>
-                                                    </button>
+                                                    </stackView>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="GsH-T4-RJy"/>
-                                                </constraints>
                                             </stackView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="R3S-hG-YIy" userLabel="Reminder Stack View">
-                                        <rect key="frame" x="0.0" y="44" width="354" height="24"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gT5-MK-cZt" userLabel="Title">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="UFv-aE-Bay" userLabel="Reminder Stack View">
+                                                <rect key="frame" x="20" y="39" width="353" height="24"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TKn-yZ-TFt">
-                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="24"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Reminders">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="20" name="SFProRounded-Semibold"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hc-Tv-JNu">
-                                                        <rect key="frame" x="324" y="0.0" width="30" height="24"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
-                                                        </buttonConfiguration>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDv-EV-1xA" userLabel="Title">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sle-qv-ZvD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="323" height="24"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Reminders">
+                                                                        <attributes>
+                                                                            <font key="NSFont" size="20" name="SFProRounded-Semibold"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqe-tA-KPN">
+                                                                <rect key="frame" x="323" y="0.0" width="30" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="Sdk-Pq-qVN"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="elD-df-BY5"/>
+                                                        </constraints>
+                                                    </stackView>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="rBV-Qf-7Wb"/>
-                                                </constraints>
                                             </stackView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KnC-k9-cHx" userLabel="Journal Stack View">
-                                        <rect key="frame" x="0.0" y="88" width="354" height="458"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oG9-vV-m8B" userLabel="Title">
-                                                <rect key="frame" x="0.0" y="0.0" width="354" height="24"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KdJ-av-lvQ" userLabel="Journal Stack View">
+                                                <rect key="frame" x="20" y="78" width="353" height="458"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-wY-ETA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="324" height="24"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Journal">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="20" name="SFProRounded-Semibold"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkC-pc-dx2">
-                                                        <rect key="frame" x="324" y="0.0" width="30" height="24"/>
-                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system">
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
-                                                        </buttonConfiguration>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZ6-fr-S3N" userLabel="Title">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="24"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lEy-6C-dPQ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="323" height="24"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="Journal">
+                                                                        <attributes>
+                                                                            <font key="NSFont" size="20" name="SFProRounded-Semibold"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qy-Ig-MfD">
+                                                                <rect key="frame" x="323" y="0.0" width="30" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="30" id="UTP-OX-1YY"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system">
+                                                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="24" id="EYv-In-3AS"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xIV-6b-JBg">
+                                                        <rect key="frame" x="0.0" y="34" width="353" height="424"/>
+                                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="424" id="062-DR-sVd"/>
+                                                        </constraints>
+                                                        <attributedString key="attributedText"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="mSk-Jp-YGp"/>
-                                                </constraints>
                                             </stackView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Hy-de-1d9">
-                                                <rect key="frame" x="0.0" y="34" width="354" height="424"/>
-                                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                                <attributedString key="attributedText"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
                                         </subviews>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="20" bottom="8" right="20"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="3hc-Tv-JNu" firstAttribute="centerX" secondItem="oEZ-fN-DYW" secondAttribute="centerX" id="UPK-2a-naL"/>
-                                    <constraint firstItem="EPH-k9-U4t" firstAttribute="width" secondItem="NGM-Bx-bkJ" secondAttribute="width" id="XUI-J8-hNi"/>
-                                    <constraint firstItem="BkC-pc-dx2" firstAttribute="centerX" secondItem="3hc-Tv-JNu" secondAttribute="centerX" id="k2M-KN-xdK"/>
+                                    <constraint firstItem="pXa-8v-EXn" firstAttribute="width" secondItem="zAZ-0e-Cab" secondAttribute="width" id="2sT-es-87g"/>
+                                    <constraint firstItem="pXa-8v-EXn" firstAttribute="width" secondItem="6V1-OC-DbL" secondAttribute="width" id="4pi-OG-Vup"/>
+                                    <constraint firstAttribute="bottom" secondItem="pXa-8v-EXn" secondAttribute="bottom" id="dG0-Wt-7bs"/>
+                                    <constraint firstItem="pXa-8v-EXn" firstAttribute="top" secondItem="6V1-OC-DbL" secondAttribute="top" id="eNk-pN-FSU"/>
+                                    <constraint firstItem="pXa-8v-EXn" firstAttribute="centerX" secondItem="6V1-OC-DbL" secondAttribute="centerX" id="yr9-nv-mnQ"/>
                                 </constraints>
-                            </stackView>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zAZ-0e-Cab"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="JzG-M4-Hr9"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lnf-CL-llA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6V1-OC-DbL" firstAttribute="top" secondItem="wKz-ag-S4o" secondAttribute="bottom" constant="32" id="5fM-jq-unn"/>
                             <constraint firstItem="GWu-7A-hWG" firstAttribute="leading" secondItem="jNx-xj-ez9" secondAttribute="leading" constant="20" id="7AU-3G-GXd"/>
                             <constraint firstItem="tzt-ui-UdT" firstAttribute="centerY" secondItem="GWu-7A-hWG" secondAttribute="centerY" id="Ay5-sS-r4v"/>
                             <constraint firstItem="GWu-7A-hWG" firstAttribute="centerY" secondItem="jNx-xj-ez9" secondAttribute="centerY" id="FUn-1t-OH8"/>
-                            <constraint firstItem="NGM-Bx-bkJ" firstAttribute="trailing" secondItem="jNx-xj-ez9" secondAttribute="trailing" id="IIz-F0-Eq6"/>
+                            <constraint firstItem="6V1-OC-DbL" firstAttribute="leading" secondItem="Lnf-CL-llA" secondAttribute="leading" id="I8G-qr-rNg"/>
                             <constraint firstItem="wKz-ag-S4o" firstAttribute="top" secondItem="jNx-xj-ez9" secondAttribute="bottom" constant="20" id="L7E-Sa-pTa"/>
+                            <constraint firstItem="Lnf-CL-llA" firstAttribute="bottom" secondItem="6V1-OC-DbL" secondAttribute="bottom" id="MXG-Qk-bnk"/>
                             <constraint firstItem="tzt-ui-UdT" firstAttribute="leading" secondItem="GWu-7A-hWG" secondAttribute="trailing" constant="10" id="Opd-GN-QK0"/>
                             <constraint firstItem="jNx-xj-ez9" firstAttribute="top" secondItem="Lnf-CL-llA" secondAttribute="top" constant="20" id="Rcn-iZ-LHc"/>
                             <constraint firstItem="jNx-xj-ez9" firstAttribute="trailing" secondItem="tzt-ui-UdT" secondAttribute="trailing" constant="20" id="TL0-9J-PfM"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="NGM-Bx-bkJ" secondAttribute="bottom" constant="20" id="Uhj-aD-pMH"/>
                             <constraint firstItem="jNx-xj-ez9" firstAttribute="centerX" secondItem="eho-tT-Tau" secondAttribute="centerX" id="aET-mJ-ndb"/>
-                            <constraint firstItem="NGM-Bx-bkJ" firstAttribute="top" secondItem="wKz-ag-S4o" secondAttribute="bottom" constant="32" id="hRX-uK-lRN"/>
+                            <constraint firstItem="Lnf-CL-llA" firstAttribute="trailing" secondItem="6V1-OC-DbL" secondAttribute="trailing" id="ec3-bW-WC3"/>
                             <constraint firstItem="wKz-ag-S4o" firstAttribute="leading" secondItem="jNx-xj-ez9" secondAttribute="leading" id="mKL-HT-MVG"/>
                             <constraint firstItem="wKz-ag-S4o" firstAttribute="trailing" secondItem="jNx-xj-ez9" secondAttribute="trailing" id="pVG-R3-l4r"/>
-                            <constraint firstItem="NGM-Bx-bkJ" firstAttribute="leading" secondItem="jNx-xj-ez9" secondAttribute="leading" id="x5i-ic-26y"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="addReminderButton" destination="3hc-Tv-JNu" id="UgU-yz-N37"/>
-                        <outlet property="addToDoItemButton" destination="oEZ-fN-DYW" id="7kS-02-mZY"/>
-                        <outlet property="dateLabel" destination="7Vi-hs-CMZ" id="2C2-47-wWG"/>
-                        <outlet property="editAppereanceButton" destination="9mE-nP-kYP" id="pbs-g1-aI9"/>
-                        <outlet property="editJournalEntryButton" destination="BkC-pc-dx2" id="z2c-LW-wT7"/>
-                        <outlet property="greetingImage" destination="jNx-xj-ez9" id="bGg-89-HhD"/>
-                        <outlet property="greetingTitle" destination="GWu-7A-hWG" id="Nd9-05-7wu"/>
-                        <outlet property="journalEntryTextView" destination="6Hy-de-1d9" id="mcM-xD-CNv"/>
-                        <outlet property="nextDayButton" destination="6vX-fV-1qM" id="iGq-vq-ZxV"/>
-                        <outlet property="previousDayButton" destination="RIQ-Od-MM3" id="2ng-0o-wCs"/>
-                        <outlet property="reminderStackView" destination="R3S-hG-YIy" id="TDp-iR-wab"/>
-                        <outlet property="settingsButton" destination="nin-hY-GjL" id="Vqh-5N-ZgV"/>
-                        <outlet property="toDoListStackView" destination="EPH-k9-U4t" id="fDK-xq-Sgg"/>
+                        <outlet property="addReminderButton" destination="Vqe-tA-KPN" id="Awc-5h-beY"/>
+                        <outlet property="addToDoItemButton" destination="L0h-v0-GgI" id="mjl-ab-L2r"/>
+                        <outlet property="dateLabel" destination="7Vi-hs-CMZ" id="uPJ-h3-W3V"/>
+                        <outlet property="editAppereanceButton" destination="9mE-nP-kYP" id="tGw-wB-MKI"/>
+                        <outlet property="editJournalEntryButton" destination="9Qy-Ig-MfD" id="dMM-9P-c1i"/>
+                        <outlet property="greetingImage" destination="jNx-xj-ez9" id="BOJ-ps-M92"/>
+                        <outlet property="greetingTitle" destination="GWu-7A-hWG" id="Yiy-XM-Smo"/>
+                        <outlet property="journalEntryTextView" destination="xIV-6b-JBg" id="7jF-MT-6RH"/>
+                        <outlet property="nextDayButton" destination="6vX-fV-1qM" id="et6-rM-ZjO"/>
+                        <outlet property="previousDayButton" destination="RIQ-Od-MM3" id="ds5-CI-1RS"/>
+                        <outlet property="reminderStackView" destination="UFv-aE-Bay" id="wUq-zt-tyB"/>
+                        <outlet property="scrollView" destination="6V1-OC-DbL" id="lJg-rJ-Ud3"/>
+                        <outlet property="settingsButton" destination="nin-hY-GjL" id="mUl-Yx-Gve"/>
+                        <outlet property="toDoListStackView" destination="d6t-Tb-4X4" id="pUJ-3d-igI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="skZ-mN-LzQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -271,9 +291,9 @@
         <image name="chevron.left" catalog="system" width="97" height="128"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="paintpalette" catalog="system" width="128" height="105"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

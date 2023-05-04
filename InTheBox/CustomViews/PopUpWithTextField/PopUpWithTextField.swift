@@ -43,7 +43,8 @@ class PopUpWithTextField: UIViewController {
         self.popUpTextField.text = placeholderText
         self.popUpButton.layer.cornerRadius = 10
         self.popUpTitle.text = self.popUpTitleString
-        self.popUpButton.setAttributedTitle(        NSAttributedString(string: self.buttonText ?? ""), for: .normal)
+        self.popUpButton.setAttributedTitle(NSAttributedString(string: self.buttonText ?? ""), for: .normal)
+        self.popUpButton.titleLabel?.textColor = .black
         self.popUpButton.addTarget(self, action: #selector(popUpButtonTapped), for: .touchUpInside)
 
     }

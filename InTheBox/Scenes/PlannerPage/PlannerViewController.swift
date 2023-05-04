@@ -8,6 +8,7 @@
 import UIKit
 
 final class PlannerViewController: UIViewController {
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet private weak var greetingTitle: UILabel!
     @IBOutlet private weak var editAppereanceButton: UIButton!
@@ -117,6 +118,9 @@ extension PlannerViewController {
     @objc func editJournalEntryButtonTapped() {
         journalEntryTextView.isScrollEnabled = true
         if journalEntryTextView.isFirstResponder {
+            if scrollView.contentSize.height > scrollView.frame.size.height {
+                scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+            }
             journalEntryTextView.scrollRangeToVisible(NSRange(location: 0,length: 0))
             editJournalEntryButton.setImage(UIImage(systemName: "pencil"), for: .normal)
             journalEntryTextView.isEditable = false
@@ -124,6 +128,9 @@ extension PlannerViewController {
             journalEntryTextView.resignFirstResponder()
 
         } else {
+            if scrollView.contentSize.height > scrollView.frame.size.height {
+                scrollView.setContentOffset(CGPoint(x: 0, y: toDoListStackView.frame.height + reminderStackView.frame.height), animated: true)
+            }
             journalEntryTextView.scrollRangeToVisible(journalEntryTextView.selectedRange)
             editJournalEntryButton.setImage(UIImage(systemName: "checkmark"), for: .normal)
             journalEntryTextView.isEditable = true
@@ -166,7 +173,7 @@ extension PlannerViewController {
         stackView.axis = .horizontal
         stackView.alignment = .top
         stackView.distribution = .fill
-        stackView.spacing = 5
+        stackView.spacing = 10
         stackView.addArrangedSubview(button)
         stackView.addArrangedSubview(textLabel)
         stackView.addArrangedSubview(optionButton)
